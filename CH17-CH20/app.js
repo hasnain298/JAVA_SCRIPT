@@ -168,6 +168,7 @@ var user = prompt("");
 
 for(var i = 0; i <=4; i++){
     if(user === A[i]){
-        alert("Yes")
+        console.log("Yes")
     }
+    // break;
 }
