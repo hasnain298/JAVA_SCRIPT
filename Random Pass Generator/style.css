@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+ body{
+    background-image:url(hasnaiin.webp);
+    /* background: #1b4758;
+background: linear-gradient(-900deg, rgba(47, 174, 224, 1) 0%, rgba(97, 232, 158, 1) 50%, rgba(247, 247, 242, 1) 100%); */
+
+} 
+.Random{
+    margin: 200px 0px 0px 440px;
+    /* border: 3px dotted rgb(252, 252, 252); */
+    height: 300px;
+    width: 500px;
+    padding: 50px;
+    opacity: 100%;
+}
+h1{
+    color: rgb(255, 255, 255);
+}
+
+p{
+    margin-left: 65px;
+    margin-top: 20px;
+    color: white;
+}
+button{
+    margin-left: 125px;
+    margin-top: 14px;
+    height: 40px;
+    width: 160px;
+    font-size: 1rem;
+    border: none;
+    background-color: #42b72a;
+    color:white;
+    border-radius: 2px;
+}
