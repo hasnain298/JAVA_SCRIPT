@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 800px;;
+    width: 100%;
+    /* background-color: rgb(61, 13, 235)
+    ; */
+    background: #020024;
+background: linear-gradient(105deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 44%);
+}
+.clock{
+    justify-content: center;
+    padding-left: 530px;
+    padding-top:160px ;
+}
+.clock > span{
+font-size: 70px;
+color: white;
+}
+
+/* #hrs{
+    /* border:2px dotted  black; */
+/* } */
