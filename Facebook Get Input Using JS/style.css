@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+.container {
+    height: 100vh;
+    ;
+}
+
+.parent {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    background-color: #f2f4f7;
+}
+
+.logo {
+    height: 300px;
+    width: 300px;
+
+}
+
+img {
+    height: 130px;
+    width: 400px;
+    /* border: 2px solid beige; */
+
+}
+
+.box {
+    height: 400px;
+    width: 380px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: white;
+}
+
+.text {
+    height: 100px;
+    width: 480px;
+    font-size: 25px;
+    margin-left: 38px;
+}
+
+.input1,
+.input2 {
+    height: 50px;
+    /* background-color: firebrick; */
+    padding: 30px;
+}
+
+.input1>input {
+    height: 50px;
+    width: 100%;
+    border: 1px solid rgb(199, 190, 190);
+    border-radius: 8px;
+    font-size: 17px;
+    padding-left: 18px;
+    outline: none;
+}
+
+.input1>input:focus {
+    /* color: #0866ff; */
+    outline: 0.85px solid #0866ff;
+}
+
+.input2>input {
+    height: 50px;
+    width: 100%;
+    border: 1px solid rgb(199, 190, 190);
+    border-radius: 8px;
+    font-size: 17px;
+    padding-left: 18px;
+    outline: none;
+}
+
+.input2>input:focus {
+    outline: 1px solid #0866ff;
+}
+
+.btn-parent {
+    height: 50px;
+    /* background-color: firebrick; */
+    padding: 30px;
+}
+
+.btn-parent>button {
+    height: 50px;
+    width: 100%;
+    border: 1px solid rgb(199, 190, 190);
+    border-radius: 8px;
+    font-size: 20px;
+    /* padding-left: 18px;  */
+    background-color: #0866ff;
+    color: white;
+    font-weight: bold;
+}
+
+.text-pass {
+    height: 30px;
+    width: 100%;
+    color: #0866ff;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.horizantal {
+    height: 40px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.horizantal>hr {
+    font-weight: 2px;
+    border: 1px solid none;
+}
+
+.create {
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.create>button>a {
+    color: white;
+    text-decoration: none;
+}
+
+.create>button {
+    height: 50px;
+    width: 200px;
+    background-color: #42b72a;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+@media only screen and (max-width:1147px) {
+
+    .parent {
+        flex-direction: column;
+    }
+
+    .text {
+        display: none;
+    }
+
+}
+
+.pakistan {
+    display: inline-block;
+    margin: 0 0.5rem;
+    animation: rubberBand;
+    animation-duration: 2s;
+    /* don't forget to set a duration! */
+}
