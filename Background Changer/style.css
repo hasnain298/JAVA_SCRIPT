@@ -1,0 +1,31 @@
+.content{
+    height: 70px;
+    width: 100%;
+    
+}
+.content{
+    display: flex;
+    justify-content: center;
+}
+ul{
+    display: flex;
+    gap: 240px;
+    justify-content: center;
+    font-family: sans-serif;
+    
+}
+ul > li{
+    list-style: none;
+    font-size: 18px;
+    /* margin: 100px auto; */
+    /* display: flex; */
+    /* justify-content: center; */
+}
+/* 
+
+#hasan{
+    border: 1px solid black;
+    height: 40px;
+    padding-top: 10px;
+    margin-right: 200px;
+} */
