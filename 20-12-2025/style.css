@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+@keyframes typewriter {
+    from{width: 0;}
+    to{
+        width: 100%;
+    }
+}
+
+p{
+    color: Purple;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+
+
+
+
+
+    animation-name: typewriter;
+    animation-duration: 4s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+.my{
+    display: flex;
+    margin: 130px 200px;
+}
