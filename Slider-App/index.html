@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-container">
+   <div class="user-img">
+  <img src="" alt="" id="user-img">
+   </div>
+   <div class="user-name">
+   <h2 id="user-name"></h2>
+   </div>
+   <div class="user-job">
+  <h2 id="user-job"></h2>
+   </div>
+   <div class="user-desc">
+   <p id="user-desc"></p>
+   </div>
+   <div class="btn">
+   <div class="lt">
+    <button id="btn-left">&lt;</button>
+   </div>
+   <div class="gt" >
+  <button id="btn-right"> &gt;</button>
+
+   </div>
+   </div>
+    </div>
+
+
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main-container{
+            height: 500px;
+            width: 600px;
+            border: 1px solid black;
+            margin: 100px auto;
+        }
+        .user-img{
+            height: 30%;
+            width: 260px;
+            margin: 10px auto;
+            border: 1px solid black;
+        }
+         #user-img{
+            height: 100%;
+            width: 260px;
+            /* margin: 10px auto; */
+            border: 1px solid black;
+        }
+        .user-name{
+            height: 10%;
+            width: 400px;
+            margin-left: 200px;
+            /* border: 1px solid black; */
+            /* text-align: center; */
+        }
+        .user-job{
+            height: 10%;
+            width: 200px;
+            margin-left: 200px;
+            /* border: 1px solid black; */
+            margin-top: 8px;
+            text-align: center;
+        }
+         .user-desc{
+            height: 130px;
+            margin-top:12px ;
+            width: 100%;
+            /* border: 1px solid black; */
+            text-align: center;
+         }
+
+         .btn{
+            display: flex;
+            font-size: 40px;
+            font-weight: bold;
+            justify-content: center;
+            /* align-items: center; */
+            height: 40px;
+            width: 100%;
+            /* border: 1px solid red; */
+            gap: 100px;
+         }
+         #user-desc{
+            font-size:20px;
+            
+         }
+         .lt , .gt{
+            height: 70px;
+            width: 0px;
+         }
+         .btn-right{
+            height:70px;
+            width: 0px;
+            font-size: 40px;
+         }
+    </style>
+    <script src="app.js"></script>
+</body>
+</html>
