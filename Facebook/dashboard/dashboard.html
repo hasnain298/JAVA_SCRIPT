@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook | Dashboard</title>
+    
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+    <!-- Dashboard Header  -->
+     <header class="dashboard-header">
+        <!-- Header-left  -->
+        <div class="header-left">
+            <div>
+                <img src="../assets/OIP.jpg" alt="">
+            </div>
+            <div>
+                <input type="text" placeholder="Search Facebook">
+            </div>
+        </div>
+        <!-- Header-center  -->
+        <div class="header-center">
+            <div>
+                <i class="fa-solid fa-house"></i>
+            </div>
+            <div>
+                 <i class="fa-solid fa-users"></i>
+            </div>
+            <div>
+                <i class="fa-solid fa-people-roof"></i>
+            </div>
+        </div>
+        <!-- Header-right  -->
+        <div class="header-right">
+            <!-- <button>Find Freinds</button> -->
+            <div class="header-icons">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="header-icons">
+                <i class="fa-brands fa-facebook-messenger"></i>
+            </div>
+            <div class="header-icons">
+                <i class="fa-solid fa-bell"></i>
+            </div>
+            <div class="user-profile-arrow">
+                <i class="fa-regular fa-user"></i>
+            
+            <div class="profile-arrow">
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            </div>
+        </div>
+     </header>
+
+     <!-- Main Container Starts Here  -->
+    <div class="main">
+        <!-- main-left  -->
+        <div class="main-left">
+         <div class="main-left-sidebar">
+            <div>
+               <i class="fa-solid fa-user"></i>         
+            </div>
+         </div>
+        </div>
+        <!-- main-center  -->
+        <div class="main-center">
+            <div class="post-container">
+            <div class="post-div">
+                <div class="post-profile">
+                     <i class="fa-regular fa-user"></i>
+                </div>
+
+                <button class="post-input" id="post-input">
+                    What's on your mind, Hasnain!
+                </button>
+                <div class="post-icons">
+                    <div><i class="fa-solid fa-video"></i></div>
+                    <div> <i class="fa-regular fa-images"></i></div>
+                    <div><i class="fa-regular fa-face-smile"></i></div>
+                </div>
+            </div>
+            <div>
+                <!-- Stories Container  -->
+              <div class="story-container" id="story-container">
+                <!-- <div class="story" style="background-image: url(../assets/OIP2.jpg);">
+                    <div class="story-profilepic">
+                 <img src="../assets/OIP.jpg" alt="">
+                    </div>
+                    <div class="story-content">
+                   <p>Your Story</p>
+                    </div>
+                </div> -->
+            </div >
+            </div>
+            <!-- Post Container  -->
+             <div class="post-map-container" id="post-container">
+                <!-- <div class="post">
+                    <div class="post-header">
+                        <div class="profile-post-content">
+                    <div class="post-img">
+                        <img  style="height: 40px; width: 40px;border-radius: 50%;"  src="https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg" alt="">
+                    </div>
+                    <div class="post-name-date">
+                        <p id="name">Muhammad Hasnain</p>
+                        <p id="date">03-02-2026</p>
+                    </div>
+                    </div>
+                    <div class="post-header-icons">
+                      <i class="fa-solid fa-ellipsis"></i>
+                    <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    </div>
+                    <div class="post-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, maxime laudantium? Veritatis, non, dignissimos quisquam perspiciatis distinctio quos neque laudantium rem consequatur corrupti similique, dolorem excepturi est dolore optio labore?</p>
+                    </div>
+                    <div class="post-user-img-posted">
+                        <img src="../assets/istockphoto-471926619-612x612.jpg" alt="">
+                    </div>
+                    <div class="post-reaction">
+                   <div class="post-react-icons">
+                     <i class="fa-solid fa-thumbs-up"></i>
+                     <i class="fa-regular fa-face-grin-beam-sweat"></i>
+                     <p>32</p>
+                   </div>
+                   <div class="post-comments">
+                    <p>22 comments</p>
+                    <p>1 share</p>
+                   </div>
+                    </div class="post-footer">
+                    <div class="post-footer-icons">
+                        <div><i class="fa-regular fa-thumbs-up"></i> Like</div>
+                        <div><i class="fa-regular fa-comment"></i> Comment</div>
+                        <div> <i class="fa-regular fa-share-from-square"></i> Share</div>
+                    </div>
+
+                    </div>
+                    </div> -->
+        </div>
+        </div>
+
+           
+        <!-- main-right  -->
+        <div class="main-right">Right</div>
+    </div>
+
+    <!-- create post dialog  -->
+        <div class="create-post-dialogue-overlay" id="post">
+        <form id="create-post-form">
+            <div class="header">
+                <p>Create Post</p>
+
+                <i class="fa-solid fa-xmark" id="close"></i>
+
+            </div>
+
+            <div class="create-post-content">
+                <div class="username">
+                    <p id="loggedin-username"> </p>
+                </div>
+                <textarea name="" id="caption"></textarea>
+                <input type="text" id="image-url" />
+                <button>Post</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script src="../authentication/authenticate.js"></script>
+</body>
+
+</html>
