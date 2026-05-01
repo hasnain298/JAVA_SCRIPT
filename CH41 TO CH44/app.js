@@ -2,26 +2,26 @@ console.log("Js Is Running!");
 
 // Problem No 1
 
-// var str = "my name is hasnain".split("");
-// var vowel = "aeiou".split("");
-// var count = 0;
+var str = "my name is hasnain".split("");
+var vowel = "aeiou".split("");
+var count = 0;
 
-// function countAllVowels() {
-//     for (var i = 0; i < str.length; i++) {
-//         var currentChar = str[i].toLowerCase();
+function countAllVowels() {
+    for (var i = 0; i < str.length; i++) {
+        var currentChar = str[i].toLowerCase();
 
-//         for (var j = 0; j < vowel.length; j++) {
-//             if (currentChar === vowel[j]) {
-//                 count++; 
-//                 break; 
-//             }
-//         }
-//     }
+        for (var j = 0; j < vowel.length; j++) {
+            if (currentChar === vowel[j]) {
+                count++; 
+                break; 
+            }
+        }
+    }
     
-//     console.log("Total number of vowels found: " + count); 
-// }
+    console.log("Total number of vowels found: " + count); 
+}
 
-// countAllVowels(); 
+countAllVowels(); 
 
 
 // Problem No 2

@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+body{
+    background-color: #f2f4f7;
+}
+.container{
+    height: 140vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* text-align: center; */
+    align-items: center;
+  
+
+}
+.logo {
+    height: 130px;
+    width: 300px; 
+     margin: 0px auto;
+}
+
+.logo > img {
+    height: 100px;
+    width: 300px;
+}
+.box{
+    height: 720px;
+    width: 480px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: white;
+    border-radius: 14px;
+}
+.heading{
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    /* background-color: aquamarine; */
+    padding-top: 10px;
+}
+.heading > p{
+    color: gray;
+    font-size: 16px;
+    margin-top: 5px;
+}
+.heading > hr{
+    margin-top: 10px;
+    border: 0.1px solid rgb(218, 213, 213);
+}
+.inputs{
+    height: 53px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.inputs > input{
+   height: 45px;
+   width: 45%;
+   border: 1px solid rgb(204, 200, 200);
+   border-radius:5px;
+   padding-left: 14px;
+   font-size: 16px;
+  
+}
+.dob{
+ height: 70px;
+ width: 100%;
+}
+.dob > p{
+    font-size: 13px;
+    margin: 8px;
+    color:grey;
+}
+.dob > select{
+    height: 40px;
+    width: 30%;
+    border: 1px solid rgb(189, 181, 181);
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding-left: 5px;
+    font-size: 15px;
+}
+.new{
+    display: flex;
+    height: 80px;
+}
+.gender > p{
+    font-size: 13px;
+    margin: 8px;
+   color: grey;
+}
+.input-f , .input-m , .input-others{
+    height: 40px;
+    width: 30%;
+    border: 1px solid grey;
+    border-radius: 4px;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 15px;
+    margin-left:10px;
+}
+.new-inputs{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.new-inputs > input{
+    width: 90%;
+    /* height: 0px; */
+    padding: 13px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    font-size: 16px;
+
+}
+.p1 , p2{
+    height: 40px;
+    width:90% ;
+    margin-left: 20px;
+}
+.p1 > p{
+    font-size: 11px;
+    color: grey;
+}
+.already{
+    height: 80px;
+    width: 100%;
+    text-align: center;
+}
+.already > button{
+    background-color:  #00a400;;
+    height: 40px;
+    width: 200px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.last{
+    text-align: center;
+    color:  #0866ff;
+    cursor: pointer;
+}
+.last > p  > a{
+color: #0866ff;
+text-decoration: none;
+}

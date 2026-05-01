@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+</head>
+<body>
+    <form onsubmit="fn(event)">
+        <div><input type="text" id="in-name" placeholder="Enter Your Full Name"></div>
+        <div><input type="text" id="in-email" placeholder="Enter Your Email"></div>
+        <div><input type="text" id="in-number" placeholder="Enter Your Phone Number"></div>
+        <div><input type="text" id="in-idCard" placeholder="Enter Your Id"></div>
+        <div><input type="file" accept="image/*" id="in-img"></div>
+        <button>Submit</button>
+    </form>
+
+
+    <!-- Handler Display -->
+    <div class="handler-display" style="margin: 100px 300px;color: black; background-color: aqua; height: 400px; width: 400px;padding: 100px;">
+        <img src="" alt="" id="display-img" style="width: 200px; display: none;">
+        <p id="display-name"></p>
+        <p id="display-email"></p>
+        <p id="display-number"></p>
+        <p id="display-card"></p>
+        <!-- <p id=""></p> -->
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
