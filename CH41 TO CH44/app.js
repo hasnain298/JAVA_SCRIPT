@@ -17,7 +17,7 @@ console.log("Js Is Running!");
 //             }
 //         }
 //     }
-    
+
 //     console.log("Total number of vowels found: " + count); 
 // }
 
@@ -39,19 +39,89 @@ console.log("Js Is Running!");
 
 
 // Pronblem No 3
-// function changeQuantities(){
-// let user = document.getElementById("inp");
-// let changeInKm = user.value * 1000
-// console.log("Value In Meters" , Math.round(changeInKm) , "meters");
-// let changeInFeet = user.value * 3280.84;
-// console.log("Value In Feet" , Math.round(changeInFeet) , "feet");
-// let changeInInches = user.value * 39370.1;
-// console.log("Value In Inches" , Math.round(changeInInches) , "inches");
-// let changesInCentimeters = user.value * 100000;
-// console.log("Value In Centimeter",Math.round(changesInCentimeters) , "centimeter");
+// function changeQuantities() {
+//     let user = document.getElementById("inp");
+//     let changeInKm = user.value * 1000
+//     console.log("Value In Meters", Math.round(changeInKm), "meters");
+//     let changeInFeet = user.value * 3280.84;
+//     console.log("Value In Feet", Math.round(changeInFeet), "feet");
+//     let changeInInches = user.value * 39370.1;
+//     console.log("Value In Inches", Math.round(changeInInches), "inches");
+//     let changesInCentimeters = user.value * 100000;
+//     console.log("Value In Centimeter", Math.round(changesInCentimeters), "centimeter");
 
 
 
 
 // }
+
+// changeQuantities()
+
+// function overTimeCalc(){
+
+// let userWorkHours = prompt("How Many Hours You Work?");
+// if(userWorkHours == 40 || userWorkHours < 40){
+//     console.log("You Have No OverTime Becuase You Didn't Work More Than 40 Hours")
+// }
+// else{
+// console.log("Your OverTime Is Submitted")
+// }
+
+
+// let OverTime = prompt("Enter Your OverTime Hous!");
+// if(OverTime <=0 || OverTime == ''){
+//     console.log("Enter Valid Hours")
+// }else if(OverTime >0 || OverTime<=10){
+//     console.log("Your Overtime Payment is  --->" , 12 * OverTime + "Rs")
+// }
+
+
+// }
+// overTimeCalc()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

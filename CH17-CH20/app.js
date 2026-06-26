@@ -120,12 +120,12 @@ console.log("Js is running!");
 // }
 // document.getElementById("counting").innerText = counting.join(", ");
 
-// // b. Reverse counting: 10, 9, ..., 1
-// let reverseCounting = [];
-// for (let i = 10; i >= 1; i--) {
-//     reverseCounting.push(i);
-// }
-// document.getElementById("reverseCounting").innerText = reverseCounting.join(", ");
+b. Reverse counting: 10, 9, ..., 1
+let reverseCounting = [];
+for (let i = 10; i >= 1; i--) {
+    reverseCounting.push(i);
+}
+document.getElementById("reverseCounting").innerText = reverseCounting.join(", ");
 
 // // c. Even: 0, 2, ..., 20
 // let even = [];
