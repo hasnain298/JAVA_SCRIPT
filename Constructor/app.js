@@ -47,3 +47,18 @@ console.log("Js Is Running!");
 
 // console.log(worker1,worker2,worker3,worker4)
 
+// function MobileMaker(brand,price,model,rom,ram,screenSize){
+//     this.brand = brand 
+//     this.price = price 
+//     this.model = model 
+//     this.rom = rom 
+//     this.ram = ram 
+//     this.screenSize = screenSize 
+    
+// }
+
+// let m1 = new MobileMaker("Samsung" , "33000$" , "S24 Ultra" , "12GB" , "256GB" , "6.4 Inch");
+// let m2 = new MobileMaker("Samsung" , "4300$" , "S23 Ultra" , "12GB" , "256GB" , "6.1 Inch");
+// console.log(m1,m2)
+
+
