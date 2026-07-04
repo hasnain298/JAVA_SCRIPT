@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Menu App</title>
+</head>
+<body>
+
+  <style>
+    body{
+      font-family: italic;
+      /* letter-spacing: 1px; */
+      /* word-spacing: 1.5px; */
+      /* text-wrap: pretty; */
+      background-color: black;
+    }
+    
+
+    button:hover{
+      transition: 0.2s ease-out ;
+      transform: scale(1.1);
+      background-color: rgb(255, 15, 15);
+    }
+    .typewriter {
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  text-shadow: 5px 4px 4px red;
+  
+  /* FIXED: Changed 'forwards' to 'infinite' and added a 5s loop duration */
+  animation: reveal-text 3s linear infinite;
+}
+
+.typewriter::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0px;
+  height: 100%;
+  background-color: rgb(240, 239, 239); /* Cursor color */
+  
+  /* FIXED: Cursor now matches the 5s loop time infinitely */
+  animation: 
+    move-cursor 5s linear infinite,
+    blink-cursor 0.4s step-end infinite;
+}
+/* Unveils the text, pauses, then resets */
+@keyframes reveal-text {
+  0% { clip-path: inset(0 100% 0 0); }   /* Start: Hidden */
+  50%, 90% { clip-path: inset(0 0% 0 0); } /* 50% to 90%: Fully Visible (Pause) */
+  100% { clip-path: inset(0 0% 0 0); }  /* End: Disappears instantly to restart */
+}
+
+/* Moves the cursor along, pauses, then resets */
+@keyframes move-cursor {
+  0% { left: 0%; }
+  50%, 90% { left: 100%; }
+  100% { left: 0%; }
+}
+
+/* Makes the cursor blink continuously */
+@keyframes blink-cursor {
+  from, to { background-color: transparent; }
+  50% { background-color: rgb(207, 204, 197); }
+}
+#text{
+  max-width: 100%;
+  /* text-wrap: balance; */
+  text-align: justify;
+}
+  </style>
+
+<!-- CSS  -->
+
+
+
+  <nav>
+    <div  class="h-[120px] w-full bg-black flex justify-evenly items-center ">
+      
+   <div class="h-[100px] w-[270px] bg-white" >
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPWCDN5SiTjW35TFIMBtHOq67PafyNsDPmG9y1kT5tyJq_8PghW_Bfqag&s=10" alt="" class="w-full h-full">
+   </div>
+   <div class="flex gap-8 items-center">
+   <button id="All" class="text-white h-[30px] w-[90px]  rounded border border-solid border-white">All</button>
+   <button id="Desi" class="text-white rounded border border-solid border-white h-[30px] w-[90px]" >Desi </button>
+   <button id="Chinese" class="text-white rounded border border-solid border-white h-[30px] w-[90px] ">Chinese</button>
+   <button id="BBQ"class="text-white rounded border border-solid border-white h-[30px] w-[90px] ">BBQ</button>
+   <button id="FastFood" class="text-white rounded border border-solid border-white h-[30px] w-[90px] ">Fast 
+  Food</button>
+  <button id="Bevarages" class="text-white rounded border border-solid border-white h-[30px] w-[90px] "> Bevarages</button>
+  <input type="text" placeholder="Search..." class="text-black bg-white pl-2 rounded h-[30px]  outline-none" id="input">
+   </div>
+    </div>
+  </nav>
+
+  
+
+  <!-- Navbar End Here..! -->
+
+  <!-- MenuBar Start Here..! -->
+
+  <div class="h-auto  bg-black p-10 pt-10 border-t-2  border-white flex flex-wrap gap-5 " id="MenuBar">
+  <!-- <div class="h-[380px] w-[300px] border-1 border-red-600 rounded border-solid" id="box">
+  <div class="h-[200px] w-full bg-red-600 border-white rounded ">
+<img src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/07/Chicken-Biryani-Recipe.jpg" alt="" class="h-full w-full border-b border border-red-600"></div>
+<div class="h-[180px] w-full  p-2 flex flex-col gap-2" id="bak">
+<h1 class=" text-2xl font-bold text-red-600">Chicken Biryani.</h1>
+<p class="text-white">Best Chicken Biryani of All Karachi. I Never Eat Such a Biryani Before...!</p>
+<p class="text-white">450</p>
+<button class="text-white rounded border border-solid border-white h-[30px] w-[90px]">Add</button>
+</div>
+  </div>  -->
+
+  </div>
+  
+ </div>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="app.js"></script>
+</body>
+</html>
