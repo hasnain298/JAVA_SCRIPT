@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.todo-container {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+h2 { margin-top: 0; color: #333; }
+.input-section { display: flex; gap: 10px; margin-bottom: 20px; }
+input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover { background: #0056b3; }
+ul { list-style: none; padding: 0; margin: 0; }
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+.delete-btn {
+    background: #dc3545;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+.delete-btn:hover { background: #bd2130; }
+/* Style for the Edit button */
+.edit-btn {
+    background: #ffc107;
+    color: #212529;
+    padding: 5px 10px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+.edit-btn:hover { background: #e0a800; }
+
+/* Style for the action button container */
+.actions {
+    display: flex;
+}
+
+/* Style for the Clear All button */
+.clear-btn {
+    background: #6c757d;
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+}
+.clear-btn:hover { background: #5a6268; }

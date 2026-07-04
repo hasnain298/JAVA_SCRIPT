@@ -3,92 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo-App</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title> Todo-App</title>
+    <!-- SweetAlert2 CSS & JS CDN -->
+    <script src="https://jsdelivr.net"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-     <div class="main-container">
-        <div class="input-button">
-        <input type="text" placeholder="Enter Your Task" id="user-Input">
-        <button id="addBtn">
-            Add
-        </button>
+    <div class="todo-container">
+        <h2>My To-Do List</h2>
+        <div class="input-section">
+            <input type="text" id="todo-input" placeholder="Add a new task...">
+            <button id="add-btn">Add</button>
         </div>
-        <ul id="todolist">
-            <li>
-                Muhammad Hasnain
-                <div class="icons">
-            <span><i  onclick="addHandler()" class="fa-solid fa-trash"></i></span>
-            <span><i onclick="deleteHandler() "  class="fa-solid fa-pen-to-square"></i></span>
-              </div>
-            </li>
-        </ul>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<style>
-    .main-container{
-        height: 300px;
-        width: 260px;
-        border: 1px solid black;
-        border-radius: 10px;
-        margin: 100px auto;
-    }
-    .input-button{
-        display: flex;
-        height: 70px;
-        width: 100%;
-        background-color: aqua;
-        justify-content: center;
-        align-items: center;
-    }
-    input{
-        height: 25px;
-        width: 100%;
-        padding-left: 10px;
-        font-size: 15px;
-    }
-    button{
-        height: 30px;
-        width: 40%;
-    }
-
-    #todolist{
-        display: flex;
-        list-style-type: none;
-        background-color: aqua;
-        padding:none;
-    }
-    #todolist> li{
-        display: flex;
-        gap: 40px;
-        justify-content: space-between;
-        
-    }
-</style>
-
-
+        <ul id="todo-list"></ul>
+        <button id="clear-all-btn" class="clear-btn">Clear All Tasks</button>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
