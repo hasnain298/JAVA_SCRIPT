@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="fn(event)">
+        <div><input type="text" id="in-name" placeholder="Enter Your Full Name"></div>
+        <div><input type="text" id="in-email" placeholder="Enter Your Email"></div>
+        <div><input type="text" id="in-number" placeholder="Enter Your Phone Number"></div>
+        <div><input type="text" id="in-idCard" placeholder="Enter Your Id"></div>
+        <div><input type="file" id="in-img" accept="image/*"></div>
+        <button>Submit</button>
+    </form>
+
+
+    <!-- Handle Form Display -->
+     <div style="height: 400px; width: 340px; background-color: aqua;margin-left: 400px;text-align: center;">
+        <div>
+    <img src="" alt="" id="display-img" style="height: 100px;width: 100px;">
+        </div>
+        <p id="display-name"> </p>
+        <p id="display-email"> </p>
+        <p id="display-number"> </p>
+        <p id="display-idCard"> </p>
+     </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

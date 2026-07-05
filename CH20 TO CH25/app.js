@@ -16,7 +16,7 @@ console.log("Hello World!");
 // QNO2 STARTS HERE 
 
 // QNO3 STARTS HERE
-// let user = "Zainab";
+// let user = "hasnain";
 // let letter = "n";
 // let indexOfLetter = user.indexOf(letter);
 // console.log("Index of " + letter + " is: " + indexOfLetter);

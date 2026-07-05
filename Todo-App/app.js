@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log("Js Is Running!")
 
 
@@ -62,6 +63,8 @@ function deleteHandler (){
 addEventListener("click" , addHandler)
 // addHandler()
 =======
+=======
+>>>>>>> a2758f347e892e9e577ea00cfd7018a17117d820
 document.getElementById('add-btn').addEventListener('click', addTask);
 document.getElementById('todo-input').addEventListener('keypress', function(e) {
     if (e.key === 'Enter') addTask();
@@ -161,4 +164,7 @@ function clearAllTasks() {
         }
     });
 }
+<<<<<<< HEAD
 >>>>>>> a2758f3 (Class Assignment)
+=======
+>>>>>>> a2758f347e892e9e577ea00cfd7018a17117d820

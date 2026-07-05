@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    height: 800px;
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+}
+.container-item{
+    height: 350px;
+    width: 300px;
+    border-radius: 12px ;
+    border:1px solid gray;
+    margin: 30px;
+    padding: 10px;
+
+}
+.container-item-2{
+    height: 350px;
+    width: 300px;
+    border-radius: 12px ;
+    border:1px solid gray;
+    margin: 30px;
+    padding: 10px;
+
+}
+
+.image{
+    background-image: url(Apple-iPhone-17-Pro-Max-Cosmic-Orange.webp);
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+    margin-bottom: 20px ;
+}
+
+h3{
+    color: grey;
+    padding: 2px;
+}
+
+.IPhone{
+line-height: 25px;
+}
+.like-reveiws{
+    display: flex;
+    justify-content: space-between;
+}
