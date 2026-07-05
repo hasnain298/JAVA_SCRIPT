@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <style>
+        body{
+            font-family: Italic;
+        }
+        ul > li:hover{
+            /* transition: scale(1.1); */
+            transition: 0.2s ease-in ;
+      transform: scale(1.01);
+        }
+    </style>
+
+    <nav class="text-center w-full h-[70px]  flex items-center justify-center">
+        <h1 class="text-4xl font-bold  italic">To-Do App</h1>
+    </nav>
+
+    <!-- Navbar End Here -->
+     
+
+    <div class="w-full  h-[500px] flex items-center justify-center" >
+        <div id="main-div " class="h-[180px] w-[340px] border border-black border-dotted rounded">
+            <div class="flex gap-3 h-[40px] w-full  p-2">
+                <input type="text" placeholder="Enter Your Task" class=" h-[25px] w-[240px] pl-2 outline-none border-b-2   border-black text-lg italic bg-white text-black" id="input">
+                <button class=" w-[70px] h-[30px]  bg-blue-500 rounded italic" id="addbtn">Add</button>
+            </div>
+            <ul class="h-[134px] rounded w-full p-1 mt-1 overflow-y-scroll scrollbar-none" id="todo-list">
+                <!-- <li class="flex items-center justify-between italic mb-1 h-[30px] shadow p-2" >
+                    Task 1
+                    <div class="flex gap-3">
+                      <span><i class="fa-solid fa-trash" id="delete"></i></span>
+                      <span><i class="fa-solid fa-pen-to-square" id="edit"></i></span>
+                    </div>
+                  </li>  -->
+            </ul>
+            </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="app.js"></script>
+</body>
+</html>
