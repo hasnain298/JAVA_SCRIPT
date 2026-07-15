@@ -1,4 +1,117 @@
 // console.log("Js Is Running!");
+// Closures
+
+// function outerFn () {
+//     let userName = "Muhammad Hasnain";
+//     console.log(userName);
+    
+
+//     function innerFn () {
+//         return userName
+//     }
+
+//      console.log(innerFn());
+//      return "Ok"
+// }
+// console.log(outerFn());
+
+
+
+// let Closures = document.getElementById("Closures") 
+// let btn = document.getElementById("btn")
+// let btn2 = document.getElementById("btn2")
+
+// function sizeMaker(size) {
+// return () => {
+// Closures.style.fontSize = `${size}px`
+// }
+// }
+// const size10 = sizeMaker(10);
+// const size30 = sizeMaker(30);
+// btn.addEventListener("click" , size10)
+// btn2.addEventListener("click" , size30)
+
+// function outerFn (x) {
+//    return function(y){
+//     return x + y
+//    }
+    
+// }
+
+// const add5 = outerFn(5);
+// const add10 = outerFn(10);
+// console.log("Answer---->",add5(10)); // 15
+// console.log("Answer---->",add10(20)); // 30
+
+
+// Shallow Copy 
+
+let user = {
+    name : "Muhammad Hasnain",
+    age : 17,
+    contact : `03149209225`,
+    email : "codermhasnain@gmail.com",
+    address : {
+        city : "Karachi",
+        country : "Pakistan"
+    }
+}
+
+// let shallowCopy = {...user};
+// shallowCopy.name = "Harry!";
+// shallowCopy.age = 99;
+// shallowCopy.contact = `03449372763`
+// shallowCopy.email = `hasnainkhanjadoon550@gmail.com`
+// console.log(shallowCopy);
+
+
+
+
+// let shallowCopy2 = Object.assign({} , user);
+// shallowCopy2.name = "Ponka";
+// shallowCopy2.age = 87;
+// shallowCopy2.contact = `+923172144919`;
+// shallowCopy2.email = `umaircoder526@gmail.com`;
+// console.log(shallowCopy2);
+
+
+
+
+// Deep Copy 
+// const deepCopy = structuredClone(user);
+// deepCopy.name = "Muhammad";
+// deepCopy.age = 32;
+// deepCopy.contact = `+932178290189`;
+// deepCopy.email = `hasnainkhanjadoon550@gmail.com`;
+// deepCopy.address.city = `Lahore`;
+// deepCopy.address.country = `Pakistan`;
+// console.log(user);
+// console.log(deepCopy);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
