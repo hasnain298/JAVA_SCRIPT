@@ -216,3 +216,12 @@ export const kidsProducts = [
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfIJV4Y3crSX334jRnNpMf3lhzqmtvSnpnSPolIHfuVQ&s=10",
     },
   ];
+
+  export const sweety = (icon,title,text) => {
+    Swal.fire({
+      icon:icon,
+      title:title ,
+      text: text,
+    });
+  }
+  
