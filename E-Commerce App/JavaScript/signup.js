@@ -8,10 +8,10 @@ let lastName = document.getElementById("lastName")
 let email = document.getElementById("email")
 let password = document.getElementById("password")
 let confirmPassword = document.getElementById("confirmPassword")
-
+let existUser = false;
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 let users = JSON.parse(localStorage.getItem("users") ) || []
-console.log(users);
+// console.log(users);
 
 // Functions ===>
 const signupHandler = (event) => {
@@ -30,7 +30,18 @@ const signupHandler = (event) => {
     if(password.value != confirmPassword.value) {
         return sweety("error" , "Error!" , "Password Doesn't Match!")
     }
-
+   
+    users.find((item) => {
+        if(item.email == email.value){
+            existUser = true;
+        }
+    })
+    
+    if(existUser) {
+      return  sweety("error" , "Oops!" , "This User Is Already Registered!")
+    }
+    
+ 
 
     let userObj = {
         firstName : firstName.value,

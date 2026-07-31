@@ -8,7 +8,7 @@ console.log(users);
 let form = document.querySelector(".form")
 let email = document.getElementById("email")
 let password = document.getElementById("password")
-let isUser = false
+let isUserLoggedIn = false
 const loginHandler = () => {
     console.log(event);
     event.preventDefault()
@@ -23,8 +23,8 @@ const loginHandler = () => {
         users.forEach((user) => {
             // console.log(user);
             if(user.email === email.value && user.password === password.value){
-                isUser = true;
-                localStorage.setItem("isUser" , JSON.parse(isUser))
+                isUserLoggedIn = true;
+                localStorage.setItem("isUserLoggedIn" , JSON.stringify(isUserLoggedIn))
             }else{
                 sweety("error" ,"Error", "Account Not Found" )
             }
@@ -50,7 +50,7 @@ const loginHandler = () => {
     //     window.location.href = "/index.html"
     // }, 1500);
 
-    if(isUser){
+    if(isUserLoggedIn){
         sweety("success" , "Congratulations!" , "Login Successfully!")
 
          setTimeout(() => {

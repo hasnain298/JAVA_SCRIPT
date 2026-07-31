@@ -7,7 +7,7 @@ import { menProducts , womenProducts , kidsProducts} from "../DummyData/dummyDat
 let menCard = document.getElementById("menCard")
 let womenCard = document.getElementById("womenCard")
 let kidCard = document.getElementById("kidCard")
-let isUserLoggedIn = JSON.parse(localStorage.getItem("isUser"))
+let isUserLoggedIn = JSON.parse(localStorage.getItem("isUserLoggedIn"))
 let btnsParent = document.querySelector(".btns")
 
 if(isUserLoggedIn){
@@ -27,6 +27,8 @@ if(isUserLoggedIn){
 
 
 const menFn = () => {
+  // console.log(id);
+  
     let menData = menProducts.map((item) => {
     return `<div class="card" style="width: 18rem;">
     <img src="${item.image}" class="card-img-top" alt="...">
@@ -34,7 +36,7 @@ const menFn = () => {
       <h5 class="card-title">${item.title}</h5>
       <p class="card-text">${item.description}</p>
       <p class="card-text">${item.price}</p>
-      <button class=" btn btn-primary">Add To Cart</button>
+      <button class=" btn btn-primary addToCartBtn" data-Product-id=${item.id}>Add To Cart</button>
     </div>
   </div>`
     })
@@ -51,7 +53,7 @@ const womenFn = () => {
       <h5 class="card-title">${item.title}</h5>
       <p class="card-text">${item.description}</p>
       <p class="card-text">${item.price}</p>
-      <button class=" btn btn-primary">Add To Cart</button>
+      <button class=" btn btn-primary addToCartBtn" data-Product-id= ${item.id}>Add To Cart</button>
     </div>
   </div>`
     })
@@ -68,7 +70,7 @@ const kidFn = () => {
     <h5 class="card-title">${item.title}</h5>
     <p class="card-text">${item.description}</p>
     <p class="card-text">${item.price}</p>
-    <button class=" btn btn-primary">Add To Cart</button>
+    <button class=" btn btn-primary addToCartBtn" data-Product-id= ${item.id}>Add To Cart</button>
   </div>
 </div>`
   })
@@ -86,12 +88,24 @@ startApp()
 
 
 const logoutHandler = () => {
-  localStorage.setItem("isUser" , JSON.stringify(false));
+  localStorage.setItem("isUserLoggedIn" , JSON.stringify(false));
   window.location.reload()
   setTimeout(() => {
     window.location.href = "/Pages/login.html"
 
   },1000)
+}
+
+const addToCartHandler = (btn) => {
+// console.log("main chlaa" , btn);
+// console.log(btn.dataset);
+let prodId = Number(btn.dataset.productId);
+console.log(prodId);
+
+let product = menProducts.find((item) => item.id == prodId )
+console.log(product);
+
+
 }
 
 document.addEventListener("click" , (e) => {
@@ -105,4 +119,9 @@ if(e.target.classList.contains("logoutBtn")) {
 //   console.log("nhi mila");
   
 // }
+
+if(e.target.classList.contains("addToCartBtn")){
+  addToCartHandler(e.target)
+}
+
 })
