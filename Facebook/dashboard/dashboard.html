@@ -150,7 +150,7 @@
 
     <!-- create post dialog  -->
         <div class="create-post-dialogue-overlay" id="post">
-        <form id="create-post-form">
+        <form id="create-post-form" name="">
             <div class="header">
                 <p>Create Post</p>
 
@@ -160,11 +160,11 @@
 
             <div class="create-post-content">
                 <div class="username">
-                    <p id="loggedin-username"> </p>
+                    <p id="loggedin-username"></p>
                 </div>
-                <textarea name="" id="caption"></textarea>
-                <input type="text" id="image-url" />
-                <button>Post</button>
+                <textarea name="Caption" id="caption"></textarea>
+                <input type="text" id="image-url" placeholder="Image url e.g. untitled.png"/>
+                <button id="postbtn">Post</button>
             </div>
         </form>
     </div>

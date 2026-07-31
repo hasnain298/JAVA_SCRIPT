@@ -126,11 +126,12 @@ let postInp = document.getElementById("post-input");
 let storyContainer = document.getElementById("story-container");
 let closePost = document.getElementById("close");
 const createPostForm = document.getElementById("create-post-form");
+// console.log(createPostForm);
 
 
-postInp.addEventListener("click" , () =>  {
-  createPost.style.display = "flex"
-})
+// postInp.addEventListener("click" , () =>  {
+//   createPost.style.display = "flex"
+// })
 closePost.addEventListener("click" , () => {
   createPost.style.display = "none"
 })
@@ -138,15 +139,16 @@ createPostForm.addEventListener("click", (e) => {
   e.stopPropagation();
 });
 
-createPostForm.addEventListener("submit" ,(e) => inputPostHandler(e))
+// createPostForm.addEventListener("submit" , inputPostHandler(e))
 
 
 const setUserInPostDialoge = () => {
   const usernameP = document.getElementById("loggedin-username");
 
   const userfromDb = JSON.parse(localStorage.getItem("users"));
+// console.log(userfromDb[0]);
 
- const love =  usernameP.innerText = `${userfromDb.firstName}`;
+ const love =  usernameP.innerText = `${userfromDb[0].firstName} ${userfromDb[0].lastName}`;
   // console.log(love)
 };
 
@@ -261,10 +263,10 @@ const createStoryHTMLThroughMap = () => {
   const storyHTML = stories.map((story,index) => {
     return ` <div class="story" style="background-image: url(${story.storyFile}));">
                      <div class="story-profilepic">
-                  <img src="${story.profilePic}" alt="">
+                  <img src=${story.profilePic} alt="">
                      </div>
                      <div class="story-content">
-                    <p>${index +1} : ${story.fullName}</p>
+                    <p> ${story.fullName}</p>
                      </div>
                </div>`
   })
@@ -277,7 +279,10 @@ createStoryHTMLThroughMap();
 
 // Stories end here 
 
-function myfn(post,index) {
+function myfn(post,index ) {
+  // e.preventDefualt()
+  console.log(post);
+  
  return ` <div class="post">
                     <div class="post-header">
                         <div class="profile-post-content">
@@ -321,7 +326,7 @@ function myfn(post,index) {
                     </div>`
 }
 
-const createPostThroughHTMLMap = () => {
+const createPostThroughHTMLMap = () => { 
   const post = posts.map((post,index) => {
     return myfn(post,index)
   })
@@ -332,11 +337,13 @@ const createPostThroughHTMLMap = () => {
 // createPostThroughHTMLMap()
 
 const postHTML = (post) => {
+  console.log(post);
+  
   return `<div class="post">
                     <div class="post-header">
                         <div class="profile-post-content">
                     <div class="post-img">
-                        <img  style="height: 40px; width: 40px;border-radius: 50%;"  src="${post.profilePic}" alt="">
+                    <img  style="height: 40px; width: 40px;border-radius: 50%;"  src=${post.profilePic}alt="">
                     </div>
                     <div class="post-name-date">
                         <p id="name"> ${post.name}</p>
@@ -379,23 +386,26 @@ const postHTML = (post) => {
  let postHTMLForContainer = posts.map((post) => postHTML(post))
 // console.log(postHTMLForContainer)
  postContainer.innerHTML = postHTMLForContainer.join("")
+//  console.log(postContainer);
+ console.log(postHTMLForContainer);
+ 
  }
 
 createPostHTMLThroughMap()
 
-const inputPostHandler = (e) => {
-  e.preventDefualt()
+const inputPostHandler = () => {
+  // event.preventDefualt()
   const caption = document.getElementById("caption");
   const imageUrl = document.getElementById("image-url");
   const getUserfromDbForInputs = JSON.parse(localStorage.getItem("users")) || [];
   let user = getUserfromDbForInputs[0]
   console.log(user)
-  // console.log(caption)
-
+  console.log(caption)
+// e.preventDefault(); 
   const newObj = {
     // e.preventDefault()
     inputUserName :`${user.firstName}  ${user.lastName}`,
-    profilePic : `https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpgxxxxxxxxxgrvdfs`,
+    profilePic : `https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg`,
     date : "19 Jan 2025",
     caption : caption.value,
     imageUrl : imageUrl.value,
@@ -405,12 +415,33 @@ const inputPostHandler = (e) => {
   }
 
   posts.unshift(newObj)
-  localStorage.setItem(posts , JSON.stringify("posts"));
+  localStorage.setItem("posts" , JSON.stringify(posts));
  createPostHTMLThroughMap();
 
-  postCont.style.display = "none";
+  // postContainer.style.display = "none";
+
+  
 }
-inputPostHandler()
+let postBtn = document.getElementById("postbtn")
+postBtn.addEventListener("click" , (e) => {
+  e.preventDefault()
+  inputPostHandler()
+  // postHTML()
+
+} )
+
+//  console.log(user)
+  // console.log(postContainer);
+// profilePic: "https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg", // Unique avatar
+//     name: "Muhammad Hasnain",
+//     date: "03-02-2026",
+//     caption: "Exploring the hidden gems of the city today! 🏛️",
+//     imgUrl: "https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg",
+//     reactions: 152,
+//     comment: 24,
+//     shares: 82
+
+// inputPostHandler()
 // const handleCreatePost = () => {
 //   // e.preventDefault()
 //   const caption = document.getElementById("caption");

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Integration</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<style>
+    .h1h1{
+        opacity: 70%;
+        text-align: center;
+        margin-top: 5px;
+    }
+    .fetch{
+        padding: 10px;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: rgb(240, 235, 235);
+    }
+    input{
+        padding-left: 10px;
+    }
+    #pp{
+        margin-top: 10px ;
+        padding:10px;
+        transition: 0.3ms ease-in-out;
+    }
+    #pp:hover{
+        transform: scale(1.02);
+        cursor: pointer;
+    }
+    #left{
+        padding: 10px;
+        scrollbar-width: none;
+        background-color: rgb(240, 235, 235);
+    }
+    .hhh{
+        height: 100px;
+        width: 100%;
+        /* border: 1px solid black; */
+        background-color: white;
+        border-radius: 10px;
+    }
+    .para{
+        margin-top: 5px;
+        padding-left: 18px;
+    }
+    .icon1{
+        color: #FF3B30;
+    }
+     .icon2{
+        color: #8E8E93;
+    }
+     .icon3{
+        color: #00A896 ;
+    }
+</style>
+
+
+    <!-- Navbar  -->
+     <nav class="h-[90px] w-full bg-white flex  justify-between ">
+     <div class="text-4xl italic font-bold h-[90px] w-[500px]  flex items-center justify-center text-[#0d6efd]">
+    <h1>Posts Container</h1>
+     </div>
+     <div class="w-[700px] h-[90px]  flex items-center justify-center gap-2">
+    <input type="text" placeholder="Search..." class="  border  h-[40px] w-[350px] italic text-[#0d6efd]  text-xl outline-none rounded " id="input">
+    <button class="text-[#0d6efd] border w-[90px] h-[40px] rounded hover:bg-[#0b5ed7] hover:text-white text-lg cursor-pointer italic " id="searchBtn">
+        Search
+    </button>
+     </div>
+     </nav>
+
+
+     <!-- Section -->
+    <section class="h-[100vh] w-[100%]  mt-10 flex gap-2" id="hero">
+        <!-- Items div  -->
+    <div id="left" class="h-[100%] w-[450px]  overflow-y-scroll "  >
+    
+    <!-- <div class="h-[100px] w-[450px]   text-4xl italic text-[#0d6efd] flex items-center justify-center hhh">
+    </div>
+    <div class="h-[110px] w-full rounded-md bg-white italic  " id="pp">
+    <h3 class="text-xl font-bold">
+        Body
+    </h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam expedita ex vel at laborum labore.</p>
+    </div> -->
+    </div>
+    <!-- Show Detail  -->
+    <div class=" flex-1  h-[100%]  rounded-lg bg-white " id="main">
+   <!-- <div class="h-[100px] w-[100%] border border-2 text-3xl italic font-bold text-[#0d6efd] flex items-center justify-center">
+   <h1>Heading Of The Posts</h1>
+   </div>
+   <div class="h-[180px] w-[100%] border border-4 para italic">
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque iusto distinctio numquam fugiat facilis, totam nihil fuga earum ea enim quam accusamus rerum rem tenetur placeat quibusdam deserunt ducimus similique.</p>
+   </div>
+   <div class="h-[100px] w-[100%] border border-[#0d6efd] flex items-center justify-center gap-10">
+    <button class="border w-[100px] h-[40px] rounded-md bg-[#0b5ed7] text-white "><i class="fa-solid fa-thumbs-up icon1"></i> : 4844</button>
+    <button class="border w-[100px] h-[40px] rounded-md bg-[#0b5ed7] text-white"><i class="fa-solid fa-eye icon2"></i> : 8383</button>
+    <button class="border w-[100px] h-[40px] rounded-md bg-[#0b5ed7] text-white"><i class="fa-solid fa-tags icon3"></i> : 93u2</button>
+   </div> -->
+    </div>
+    </section>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>

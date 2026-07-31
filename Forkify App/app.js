@@ -26,11 +26,11 @@ let result =  await apiRes.json();
 // console.log(result)
 
 const {data:{recipes}} = result;
-console.log(recipes)
+// console.log(recipes)
 
 
 let allHTMLForUi = recipes.map((recipe) => {
-console.log(recipe)
+// console.log(recipe)
     return itemFn(recipe)
 })
 sidebar.innerHTML = `<h2>Loading...</h2>`
@@ -60,17 +60,17 @@ const searchHandler = async () => {
 
 
 const particularItemData = async (elem) => {
-// console.log("ok" , elem)
+console.log("ok" , elem)
 
 let id = elem.dataset.recipeId
 console.log(id)
 
 let apiRes = await fetch(`https://forkify-api.jonas.io/api/v2/recipes/${id}`);
 let result = await apiRes.json()
-// console.log(result)
+console.log(result)
 
 const {data: {recipe}} = result;
-// console.log(recipe)
+console.log(recipe)
 
 main.innerHTML = `<img src="${recipe.image_url}" alt="">
 <h3>Title : ${recipe.title}</h3>
