@@ -35,13 +35,17 @@
         #left{
             background-color: rgb(231, 225, 225);
         }
+        .navbar{
+            position: sticky;
+            top: 0;
+        }
     </style>
     <!-- Navbar -->
-    <nav class="h-[100px] w-full bg-white flex justify-between">
-        <div class="h-[100px] w-[30%] border flex text-4xl italic text-[#6f42c1] font-bold items-center justify-center">
+    <nav class="h-[80px] w-full bg-white flex items-center justify-between navbar">
+        <div class="h-[100px] w-[30%]  flex text-4xl italic text-[#6f42c1] font-bold items-center justify-center">
             <h1>Harry Restraunt</h1>
         </div>
-        <div class="h-[100px] w-[50%] border text-[#6f42c1] flex items-center justify-center gap-5">
+        <div class="h-[100px] w-[50%]  text-[#6f42c1] flex items-center justify-center gap-5">
             <input type="text" placeholder="Search Food e.g. Biryani"
                 class=" h-[40px] w-[360px] border text-lg italic rounded-md" id="input">
             <button
@@ -55,7 +59,7 @@
 
     <section class="h-[calc(130vh-100px)]  flex section gap-5">
         <!-- Left Side Bar -->
-        <div class="h-full w-[34%]  border border-5 rounded-md p-2 " id="left">
+        <div class="h-full w-[34%]   rounded-md p-2 " id="left">
             <!-- Heading  -->
             <div class="h-[100px] w-[full] border border-[#6f42c1] rounded-lg text-3xl italic flex items-center justify-center text-[#6f42c1] bg-white">
                 <h1>Food Items</h1>
@@ -78,21 +82,27 @@
             <!-- Items end  -->
         </div>
         <!-- Right Side Bar -->
-        <div class="h-full w-[66%] border rounded-md bg-white" id="main">
+        <div class="h-full w-[66%] border border-[#6f42c1] rounded-md bg-white" id="main">
             <!-- Heading and para  -->
-            <div class="h-[100px] w-[full] border border-yellow-400 border-3 flex flex-col items-center justify-center">
+            <!-- <div class="h-[100px] w-[full] border border-yellow-400 border-3 flex flex-col items-center justify-center">
            <h1 class="text-2xl italic font-bold">
             Turkey burgers with beetroot relish
         </h1>
         <p class="text-lg italic"> BBC Good Food</p>
             </div>
 
-            <!-- image  -->
-             <div class="h-[350px]  w-full border flex items-center justify-center p-3">
+            < image  -->
+             <!-- <div class="h-[350px]  w-full border flex items-center justify-center p-3">
             <div class="h-full border-3  rounded-lg w-[40%] border border-blue-900">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF_EV-qh4Pu13muRkx4ElZUeOKOb7DLA3HNpUfLreGtA&s=10" alt="" class="h-full w-full rounded-md">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF_EV-qh4Pu13muRkx4ElZUeOKOb7DLA3HNpUfLreGtA&s=10" alt="" class="h-full w-full rounded-md"> -->
             </div>
              </div>
+             <!-- image end  -->
+             <!-- <div class="h-[160px] w-full border flex items-center justify-center gap-3" >
+             <button class="h-[50px] w-[170px] border rounded-md bg-[#59359a] text-white cursor-pointer ">Cook-Time : 120min</button>
+             <button class="h-[50px] w-[170px] border rounded-md bg-[#59359a] text-white cursor-pointer">Servings : 120min</button>
+             <button class="h-[50px] w-[170px] border rounded-md bg-[#59359a] text-white cursor-pointer">Reviews : 120min</button>
+             </div> --> 
         </div>
     </section>
 
