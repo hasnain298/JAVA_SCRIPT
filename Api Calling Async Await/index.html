@@ -11,22 +11,33 @@
         body{
             font-family:Arial, Helvetica;
         }
+        nav{
+            position: sticky;
+            top: 0;
+        }
+        .card{
+            transition: transform 0.3s ease-in-out; 
+
+        }
+        .card:hover{
+            transform: scale(1.1); 
+        }
     </style>
     <!-- Navbar -->
- <nav class="h-[100px] w-full  bg-[#060709] flex justify-evenly items-center italic gap-5">
-<div class="h-[100px] w-[270px]">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjfE1BHgHfv5K4O9TCQLcFIqBHqiIwYUKb-NgPXVLMOQ&s=10"  alt="" class="h-full w-full">
+ <nav class="h-[100px] bg-black w-full  w-full flex  items-center italic gap-40 p-5">
+
+<div class="  bg-black">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjfE1BHgHfv5K4O9TCQLcFIqBHqiIwYUKb-NgPXVLMOQ&s=10"  alt="" class="h-[100px] w-[2533350px]">
 </div>
-<div class="flex text-gray-300 gap-10 text-md text-bold">
+<div class="flex text-gray-300 gap-10 text-md text-bold w-full bg-black ">
     <button class="border border-solid p-2 rounded  hover:cursor-pointer hover:bg-white hover:text-black w-[100px]" id="all">Home</button>
     <button class="border border-solid p-2 rounded  hover:cursor-pointer w-[100px] hover:bg-white hover:text-black w-[100px]" id="groceries">Groceries</button>
-    <button class="border border-solid p-2 rounded  hover:cursor-pointer w-[100px] hover:bg-white hover:text-black w-[100px]">Furniture</button>
-    <button class="border border-solid p-2 rounded  hover:cursor-pointer w-[100px] hover:bg-white hover:text-black w-[100px]">Accessories</button>
-    <button class="border border-solid p-2 rounded  hover:cursor-pointer w-[100px] hover:bg-white hover:text-black w-[100px]">Fragnances</button> 
+    <button class="border border-solid p-2 rounded  hover:cursor-pointer w-[100px] hover:bg-white hover:text-black w-[100px]" id="Furniture">Furniture</button>
+    <button class="border border-solid p-2 rounded  hover:cursor-pointer w-[100px] hover:bg-white hover:text-black w-[100px]" id="Accessories">Accessories</button>
+    <button class="border border-solid p-2 rounded  hover:cursor-pointer w-[100px] hover:bg-white hover:text-black w-[100px]  " id="fragnances">Fragrances</button> 
 </div>
-<div class="flex gap-2" >
-    <input type="text" placeholder="Search e.g. Beauty.." class="bg-white text-black h-[40px] rounded-full pl-4 outline-none italic">
-<button class="border border-solid p-2 rounded-full  hover:cursor-pointer hover:bg-white hover:text-black w-[100px]  text-gray-300"  >Search</button>
+<div class="flex gap-2 w-full" >
+    <input type="text" placeholder="Search e.g. Beauty.." class="bg-white text-black h-[40px] rounded-full pl-4 outline-none italic" id="input">
 </div>
 
  </nav>
@@ -34,10 +45,15 @@
 
  <!-- Section  -->
 <section class="w-full h-auto">
+<<<<<<< HEAD
   <div class="cardParent flex flex-wrap justify-center gap-5">
    <div class="border border-2 h-[270px] w-[190px] bg-black">
 llllllllllllllllll
    </div>
+=======
+  <div class="cardParent flex flex-wrap justify-center gap-2 w-full ">
+
+>>>>>>> 93dcbec787987e723ed87de8abac9a23b9510bdf
   </div>
 </section>
 

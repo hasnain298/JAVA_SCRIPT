@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Restuarant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+        integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <style>
+        /* *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        } */
+        body {
+            background-color: rgb(231, 225, 225);
+            font-family: Helvetica;
+        }
+
+        input {
+            padding-left: 10px;
+            outline: none;
+        }
+
+        .section {
+            margin-top: 10px;
+            /* background-color: white; */
+        }
+        #left{
+            background-color: rgb(231, 225, 225);
+        }
+        .navbar{
+            position: sticky;
+            top: 0;
+        }
+    </style>
+    <!-- Navbar -->
+    <nav class="h-[100px] w-full bg-white flex justify-between navbar">
+        <div class="h-[100px] w-[30%]  flex text-4xl italic text-[#6f42c1] font-bold items-center justify-center">
+            <h1>Harry Restraunt</h1>
+        </div>
+        <div class="h-[100px] w-[50%]  text-[#6f42c1] flex items-center justify-center gap-5">
+            <input type="text" placeholder="Search Food e.g. Biryani"
+                class=" h-[40px] w-[360px] border text-lg italic rounded-md" id="input">
+            <button
+                class="h-[40px] w-[100px] border rounded-md hover:bg-[#59359a] hover:text-white cursor-pointer" id="btn">Search</button>
+        </div>
+    </nav>
+
+    <!-- Navbar Completed  -->
+
+    <!-- Section  -->
+
+    <section class="h-[calc(130vh-100px)]  flex section gap-5">
+        <!-- Left Side Bar -->
+        <div class="h-full w-[34%]   rounded-md p-2 " id="left">
+            <!-- Heading  -->
+            <div class="h-[100px] w-[full] border border-[#6f42c1] rounded-lg text-3xl italic flex items-center justify-center text-[#6f42c1] bg-white">
+                <h1>Food Items</h1>
+            </div>
+            <!-- Items  -->
+            <div class="h-[94vh] mt-2 w-full  rounded-lg overflow-y-scroll scrollbar-none" id="left-items">
+                <!-- <div class="h-[100px] w-[100%]   mt-2 rounded-lg p-1 flex items-center justify-around bg-white">
+                    <div class="h-[90px] w-[90px] border border-white rounded-full">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF_EV-qh4Pu13muRkx4ElZUeOKOb7DLA3HNpUfLreGtA&s=10"
+                            alt="" class="h-full w-full  rounded-full">
+                    </div>
+                    <div class="h-[100px] w-[78%] border border-white p-3">
+                        <h2 class=" text-2xl font-bold italic">
+                            Biryani
+                        </h2>
+                        <p class=" w-full">Lorem ipsum dolor sit amet consectetur adip elit. Nihil aut, iste.</p>
+                    </div>
+                </div> -->
+            </div>
+            <!-- Items end  -->
+        </div>
+        <!-- Right Side Bar -->
+        <div class="h-full w-[66%] border border-[#6f42c1] rounded-md bg-white" id="main">
+            <!-- Heading and para  -->
+            <!-- <div class="h-[100px] w-[full] border border-yellow-400 border-3 flex flex-col items-center justify-center">
+           <h1 class="text-2xl italic font-bold">
+            Turkey burgers with beetroot relish
+        </h1>
+        <p class="text-lg italic"> BBC Good Food</p>
+            </div>
+
+            < image  -->
+             <!-- <div class="h-[350px]  w-full border flex items-center justify-center p-3">
+            <div class="h-full border-3  rounded-lg w-[40%] border border-blue-900">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF_EV-qh4Pu13muRkx4ElZUeOKOb7DLA3HNpUfLreGtA&s=10" alt="" class="h-full w-full rounded-md"> -->
+            </div>
+             </div>
+             <!-- image end  -->
+             <!-- <div class="h-[160px] w-full border flex items-center justify-center gap-3" >
+             <button class="h-[50px] w-[170px] border rounded-md bg-[#59359a] text-white cursor-pointer ">Cook-Time : 120min</button>
+             <button class="h-[50px] w-[170px] border rounded-md bg-[#59359a] text-white cursor-pointer">Servings : 120min</button>
+             <button class="h-[50px] w-[170px] border rounded-md bg-[#59359a] text-white cursor-pointer">Reviews : 120min</button>
+             </div> --> 
+        </div>
+    </section>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
