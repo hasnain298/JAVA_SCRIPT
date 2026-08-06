@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://tailwindcss.com"></script>-->
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <!-- <link rel="stylesheet" href="https://googleapis.com" /> -->
+    <!-- <link rel="stylesheet" href="https://googleapis.com" /> -->
+
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/4.3.1/lib.min.js" integrity="sha512-nemOt5KLlKTwLNLLSxWFr6K5UW5u0MA0UckJ2YhM5LBGBQe5b20fODTw6TCuLEXIdcsr57nRqlAKCbBvLg1IRw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+</head>
+<body>
+
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+    </style>
+    <main class="h-[100vh] w-[100%] bg-yellow-500 flex items-center justify-center" >
+    <div class="card h-[380px] w-[300px] bg-white p-1 rounded-md">
+    <div class="h-[200px] w-[100%] ">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBB4LQTn0vRq4ydPLp-uTj_lEUHOHYWUU18JlCq5KuMw&s=10" alt="" class="rounded-lg">
+    </div>
+    <hr class="h-[3px] ">
+    <div class="h-[150px] w-[100%] px-2 py-1">
+   <p class="text-3xl font-bold italic">Butterfly</p>
+   <p class="text-sm italic my-1">Lorem ipsum dolor sit amet consecur, cing elit. Deserunt libero fugit officia perspiciatis.</p>
+   <p class="bg-green-400 h-auto w-[50px] rounded-lg text-center my-2">99$</p>
+   <button class="bg-gray-300 w-full rounded my-1 text-lg italic my-3" id="more">Read More</button>
+    </div>
+    </div>
+    </main>
+
+    <div id="productModal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 h-full w-full">
+        <div class="h-[400px] w-[700px] border flex rounded-lg bg-white border-2 shadow-xl">
+       <div class="h-full w-[50%] p-4 border rounded-lg">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIJ4tsK-5-am7SRNPPnw4HNrBxOLFQOv0ihrH2AhNTCA&s=10" alt="" height="100%" width="100%">
+    <p class="text-blue-600 text-2xl italic text-center my-3">Beauty Product</p>
+       </div>
+       <div class="h-full w-[50%] ">
+      <div class="h-[100px] w-[full] border rounded-lg border-white flex justify-between items-center px-3  italic font-bold">
+        
+        <h1 class="text-3xl">Sunrise/Sunfall</h1>
+        <button id="btnclose">/\</button>
+      </div>
+      <div class="h-[100px] w-full bg-white flex flex-col justify-center px-3 text-lg italic font-bold gap-2">
+     <p class="text-gray-400">Rating : 4.5</p>
+     <p class="text-3xl text-gray-600">$5.99</p>
+      </div>
+      <div class="h-[140px] w-full p-3">
+    <p class="text-lg text-gray-400">
+        The Yellow Peeler is a handy tool for peeling fruits and vegetables with ease. Its bright yellow color adds a cheerful touch to your kitchen gadgets.</p>
+      </div>
+      <div class="h-70px w-full px-2">
+        <Button class="bg-green-500 w-full h-[40px] text-lg italic rounded-lg text-white">Add To Cart</Button>
+      </div>
+       </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

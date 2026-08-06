@@ -305,21 +305,22 @@ const startApp = () => {
   <h1 class=" text-2xl font-bold text-red-600">${item.title}</h1>
   <p class="text-white">${item.desc}</p>
   <p class="text-white">${item.price}</p>
-  <button class="text-white rounded border border-solid border-white h-[30px] w-[90px]">Add</button>
+  <button class="text-white rounded border border-solid border-white h-[30px] w-[90px] btn">Add</button>
   </div>
     </div> `
     })
 
     menuBar.innerHTML = `<h1 class=" w-full text-4xl text-center text-white font-bold italic ">Loading...</h1>`
-setTimeout(() => {
+// setTimeout(() => {
     menuBar.innerHTML = modify.join(" ")
-},1000)
+// },1000)
 }
 startApp()
 
 const allHandler =()=> {
 startApp()
 }
+
 const desiHandler = (category) => {
     const filteredItems = arr.filter((item) => {
     if(item.category.toLowerCase() === category.toLowerCase()){
@@ -334,7 +335,7 @@ const desiHandler = (category) => {
   <h1 class=" text-2xl font-bold text-red-600">${o.title}</h1>
   <p class="text-white">${o.desc}</p>
   <p class="text-white">${o.price}</p>
-  <button class="text-white rounded border border-solid border-white h-[30px] w-[90px]">Add</button>
+  <button class="text-white rounded border border-solid border-white h-[30px] w-[90px] btn">Add</button>
   </div>
     </div> `
     })
@@ -343,6 +344,7 @@ const desiHandler = (category) => {
     
 
 }
+
 const chineseHandler = (category) => {
     const chineseFilterItems = arr.filter((item) => {
     if(item.category.toLowerCase() === category.toLowerCase()){
@@ -357,7 +359,7 @@ const chineseHandler = (category) => {
   <h1 class=" text-2xl font-bold text-red-600">${o.title}</h1>
   <p class="text-white">${o.desc}</p>
   <p class="text-white">${o.price}</p>
-  <button class="text-white rounded border border-solid border-white h-[30px] w-[90px]">Add</button>
+  <button class="text-white rounded border border-solid border-white h-[30px] w-[90px] btn">Add</button>
   </div>
     </div> `
 
@@ -365,6 +367,7 @@ const chineseHandler = (category) => {
 menuBar.innerHTML = modify.join(" ")
 
 }
+
 const bbqHandler = (category) => {
     const filteredItems = arr.filter((item) => {
     if(item.category.toLowerCase() === category.toLowerCase()) return true
@@ -377,7 +380,7 @@ const bbqHandler = (category) => {
   <h1 class=" text-2xl font-bold text-red-600">${o.title}</h1>
   <p class="text-white">${o.desc}</p>
   <p class="text-white">${o.price}</p>
-  <button class="text-white rounded border border-solid border-white h-[30px] w-[90px]">Add</button>
+  <button class="text-white rounded border border-solid border-white h-[30px] w-[90px] btn">Add</button>
   </div>
     </div> `
     })
@@ -385,6 +388,7 @@ const bbqHandler = (category) => {
         menuBar.innerHTML = modify.join(" ")
     
 }
+
 const fastFoodHandler = (category) => {
     const filteredItems = arr.filter((item) => {
     if(item.category.toLowerCase() === category.toLowerCase()) return true
@@ -397,13 +401,14 @@ const fastFoodHandler = (category) => {
   <h1 class=" text-2xl font-bold text-red-600">${o.title}</h1>
   <p class="text-white">${o.desc}</p>
   <p class="text-white">${o.price}</p>
-  <button class="text-white rounded border border-solid border-white h-[30px] w-[90px]">Add</button>
+  <button class="text-white rounded border border-solid border-white h-[30px]  w-[90px] btn">Add</button>
   </div>
     </div> `
     })
         menuBar.innerHTML = modify.join(" ")
    
 }
+
 const bevaragesHandler = (category) => {
     const filteredItems = arr.filter((item) => {
    if(item.category.toLowerCase() === category.toLowerCase())  return true
@@ -412,12 +417,12 @@ const bevaragesHandler = (category) => {
 const modify = filteredItems.map((o) => {
 return  ` <div class="h-[380px] w-[300px] border-1 border-red-600 rounded border-solid" id="box">
 <div class="h-[200px] w-full bg-red-600 border-white rounded ">
-<img src="${o.img}" alt="" class="h-full w-full border-b border border-red-600"></div>
+<img src="${o.img}" alt="" class="h-full w-full border-b border border-red-600 btn"></div>
 <div class="h-[180px] w-full  p-2 flex flex-col gap-2" id="bak">
 <h1 class=" text-2xl font-bold text-red-600">${o.title}</h1>
 <p class="text-white">${o.desc}</p>
 <p class="text-white">${o.price}</p>
-<button class="text-white rounded border border-solid border-white h-[30px] w-[90px]">Add</button>
+<button class="text-white rounded border border-solid border-white h-[30px] w-[90px] btn">Add</button>
 </div>
 </div> `
 })
@@ -451,6 +456,9 @@ if(modify.length > 0) {
 }
 }
 
+const detailsHandler = () => {
+}
+
 All.addEventListener("click" , () => {allHandler()})
 Desi.addEventListener("click" , () => desiHandler("desi"))
 Chinese.addEventListener("click" , () => chineseHandler("chinese"))
@@ -458,3 +466,10 @@ BBQ.addEventListener("click" , () => bbqHandler("bbq"))
 Fast.addEventListener("click" , () => fastFoodHandler("fastfood"))
 Bevarages.addEventListener("click" , () => bevaragesHandler("beverages"))
 input.addEventListener("input" , () => searchHanlder())
+document.addEventListener("click" , (e) => {
+if(e.target.classList.contains("btn")) {
+    detailsHandler()
+}
+    
+
+})

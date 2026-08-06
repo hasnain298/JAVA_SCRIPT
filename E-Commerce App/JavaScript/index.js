@@ -1,6 +1,6 @@
 console.log("Js Is Running!");
 
-import { menProducts , womenProducts , kidsProducts} from "../DummyData/dummyData.js";
+import { menProducts , womenProducts , kidsProducts, sweety} from "../DummyData/dummyData.js";
 // console.log(menProducts);
 
 // Variables
@@ -9,7 +9,7 @@ let womenCard = document.getElementById("womenCard")
 let kidCard = document.getElementById("kidCard")
 let isUserLoggedIn = JSON.parse(localStorage.getItem("isUserLoggedIn"))
 let btnsParent = document.querySelector(".btns")
-
+let cartArray = []
 if(isUserLoggedIn){
   btnsParent.innerHTML = `<button type="button" class="btn btn-outline-primary logoutBtn">Logout</button>`
 }else{
@@ -96,16 +96,26 @@ const logoutHandler = () => {
   },1000)
 }
 
+
+
+
+
 const addToCartHandler = (btn) => {
 // console.log("main chlaa" , btn);
 // console.log(btn.dataset);
+
+if(!isUserLoggedIn){
+  return sweety("error" , "Error!" , "Please SignUp/Login First...")
+}
 let prodId = Number(btn.dataset.productId);
 console.log(prodId);
 
-let product = menProducts.find((item) => item.id == prodId )
+let product = menProducts.find((item) => item.id == prodId) || womenProducts.find((item) => item.id == prodId) || kidsProducts.find((item) => item.id == prodId)
 console.log(product);
+cartArray.push(product)
 
-
+localStorage.setItem("cart" , JSON.stringify(cartArray));
+sweety("success" , "Great!" , "Added To Cart Successfully!")
 }
 
 document.addEventListener("click" , (e) => {
