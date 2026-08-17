@@ -11,21 +11,23 @@ let isUserLoggedIn = JSON.parse(localStorage.getItem("isUserLoggedIn"))
 let btnsParent = document.querySelector(".btns")
 let cartArray = JSON.parse(localStorage.getItem("cart")) || [];
 let badge = document.getElementById("badge")
-
-
-if (isUserLoggedIn) {
-  btnsParent.innerHTML = `<button type="button" class="btn btn-outline-primary logoutBtn">Logout</button>`
-} else {
-  btnsParent.innerHTML = `<a href="./Pages/login.html   "><button type="button" class="btn btn-outline-primary">Login</button></a>
-  <a href="./Pages/signup.html"><button type="button" class="btn btn-outline-primary">Sign Up</button></a>`
-}
-
-
-
-
+let searchBtn = document.getElementById("searchBtn")
+let input = document.getElementById("input")
 
 
 // Functions
+
+function foo() {
+  if (isUserLoggedIn) {
+    btnsParent.innerHTML = `<button type="button" class="btn btn-outline-primary logoutBtn">Logout</button>`
+  } else {
+    window.location.href = "../index.html";
+    return sweety("error", "Error", "Please Login!")
+
+  }
+}
+foo()
+
 
 
 const badgeHandler = () => {
@@ -36,12 +38,14 @@ const badgeHandler = () => {
 
   badge.innerText = returnReduce;
 }
+badgeHandler()
 
 
-const menFn = () => {
+
+const kidsFn = () => {
   // console.log(id);
 
-  let menData = menProducts.map((item) => {
+  let menData = kidsProducts.map((item) => {
     return `<div class="card" style="width: 18rem;">
     <img src="${item.image}" class="card-img-top" alt="...">
     <div class="card-body">
@@ -53,57 +57,11 @@ const menFn = () => {
   </div>`
   })
 
-  menCard.innerHTML = menData.join(" ")
+  kidCard.innerHTML = menData.join(" ")
 }
+kidsFn()
 
 
-const womenFn = () => {
-  let womenData = womenProducts.map((item) => {
-    return `<div class="card" style="width: 18rem;">
-    <img src="${item.image}" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">${item.title}</h5>
-      <p class="card-text">${item.description}</p>
-      <p class="card-text">${item.price}</p>
-      <button class=" btn btn-outline-primary addToCartBtn" data-Product-id= ${item.id}>Add To Cart</button>
-    </div>
-  </div>`
-  })
-
-  womenCard.innerHTML = womenData.join(" ")
-}
-
-
-const kidFn = () => {
-  let kidData = kidsProducts.map((item) => {
-    return `<div class="card" style="width: 18rem;">
-  <img src="${item.image}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">${item.title}</h5>
-    <p class="card-text">${item.description}</p>
-    <p class="card-text">${item.price}</p>
-    <button class=" btn btn-outline-primary addToCartBtn" data-Product-id= ${item.id}>Add To Cart</button>
-  </div>
-</div>`
-  })
-
-  kidCard.innerHTML = kidData.join(" ")
-}
-
-const startApp = () => {
-  menFn()
-  womenFn()
-  kidFn()
-
-}
-
-startApp()
-
-if(isUserLoggedIn){
-  badgeHandler()
-}else{
-  badge.style.display = "none"
-}
 
 
 const logoutHandler = () => {
@@ -114,8 +72,6 @@ const logoutHandler = () => {
 
   }, 1000)
 }
-
-
 
 
 
@@ -151,6 +107,46 @@ const addToCartHandler = (btn) => {
   sweety("success", "Great!", "Added To Cart Successfully!")
   badgeHandler()
 }
+// console.log(menCard);
+
+const searchHanlder = (event) => {
+  event.preventDefault()
+  let searchVal = input.value;
+
+  if (!searchVal) {
+    return sweety("error", "Error", "Please Enter Something!")
+  }
+
+
+
+  let modify = menProducts.filter((item) => {
+  if (item.title.toLowerCase().includes(searchVal.toLowerCase())) {
+      return item
+
+    }
+  })
+
+  // console.log(searchVal.toLowerCase());/
+
+  // console.log(modify);
+
+  const mapping = modify.map((o) => {
+    return `<div class="card" style="width: 18rem;">
+<img src="${o.image}" class="card-img-top" alt="...">
+<div class="card-body">
+  <h5 class="card-title">${o.title}</h5>
+  <p class="card-text">${o.description}</p>
+  <button class=" btn btn-primary addToCartBtn" data-Product-id="${o.id}">Add To Cart</button>
+</div>
+</div>`
+  })
+
+
+  womenCard.innerHTML = mapping.join(" ")
+}
+
+
+searchBtn.addEventListener("click", () => { searchHanlder(event) })
 
 document.addEventListener("click", (e) => {
   // console.log(e.target.classList.contains("logoutBtn"));

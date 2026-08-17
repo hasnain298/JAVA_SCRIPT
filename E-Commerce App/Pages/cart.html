@@ -10,7 +10,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="Styles/style.css">
+  <link rel="stylesheet" href="../Styles/style.css">
 </head>
 
 <body>
@@ -25,38 +25,38 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="./Pages/mens.html">Men</a>
+            <a class="nav-link" href="">Men</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./Pages/womens.html">Women</a>
+            <a class="nav-link" href="./womens.html">Women</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./Pages/kids.html">Kids</a>
+            <a class="nav-link" href="./kids.html">Kids</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               All Categories
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="./Pages/mens.html">Men</a></li>
-              <li><a class="dropdown-item" href="./Pages/womens.html">Women</a></li>
-              <li><a class="dropdown-item" href="./Pages/kids.html">Kid</a></li>
+              <li><a class="dropdown-item" href="">Men</a></li>
+              <li><a class="dropdown-item" href="./womens.html">Women</a></li>
+              <li><a class="dropdown-item" href="./kids.html">Kid</a></li>
             </ul>
             <li class="nav-item parent">
-              <a class="nav-link" href="./Pages/cart.html">Cart <span id="badge">6</span></a>
+              <a class="nav-link" href="">Cart <span id="badge">6</span></a>
             </li>
           </li>
         </ul>
-        <!-- <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form> -->
+        <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" id="input" aria-label="Search"/>
+        <button class="btn btn-outline-success me-5" type="submit" id="searchBtn">Search</button>
+      </form>
         <div class="btns">
-          <a href="./Pages/login.html   "><button type="button" class="btn btn-outline-primary">Login</button></a>
-          <a href="./Pages/signup.html"><button type="button" class="btn btn-outline-primary">Sign Up</button></a>
+          <a href="../Pages/login.html "><button type="button" class="btn btn-outline-primary">Login</button></a>
+          <a href="../Pages/signup.html"><button type="button" class="btn btn-outline-primary">Sign Up</button></a>
         </div>
 
       </div>
@@ -65,7 +65,7 @@
 
 
   <!-- Carousel -->
-  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <!-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img
@@ -93,15 +93,15 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
-  </div>
+  </div> -->
 
   <!-- Men's Product -->
-  <section id="men">
+  <section id="cart">
     <h1>
-      Men's
+      Cart's
     </h1>
 
-    <div class="cardParent" id="menCard">
+    <div class="cardParent" id="cartCards">
       <!-- <div class="card" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
@@ -112,44 +112,6 @@
 </div> -->
     </div>
   </section>
-
-  <!-- Women's Product -->
-  <section id="women">
-    <h1>
-      Women's
-    </h1>
-
-    <div class="cardParent" id="womenCard">
-      <!-- <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-    <button class=" btn btn-primary">Add To Cart</button>
-  </div>
-</div> -->
-    </div>
-  </section>
-
-
-  <!-- Kid's -->
-  <section id="kid">
-    <h1>
-      Kid's
-    </h1>
-
-    <div class="cardParent" id="kidCard">
-      <!-- <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-    <button class=" btn btn-primary">Add To Cart</button>
-  </div>
-</div> -->
-    </div>
-  </section>
-
 
   <!-- footer  -->
   <footer class="bg-white border-top py-4 mt-5">
@@ -177,8 +139,8 @@
 
 
 
-  <script type="module" src="./DummyData/dummyData.js"></script>
-  <script type="module" src="./JavaScript/index.js"></script>
+  <script type="module" src="../DummyData/dummyData.js"></script>
+  <script type="module" src="../JavaScript/cart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 

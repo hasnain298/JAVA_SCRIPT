@@ -19,12 +19,12 @@ let input = document.getElementById("input")
 
 function foo() {
   if (isUserLoggedIn) {
-      btnsParent.innerHTML = `<button type="button" class="btn btn-outline-primary logoutBtn">Logout</button>`
-    } else {
-        window.location.href = "../index.html";
-        return sweety("error" , "Error" , "Please Login!")
-     
-    }
+    btnsParent.innerHTML = `<button type="button" class="btn btn-outline-primary logoutBtn">Logout</button>`
+  } else {
+    window.location.href = "../index.html";
+    return sweety("error", "Error", "Please Login!")
+
+  }
 }
 foo()
 
@@ -52,7 +52,7 @@ const menFn = () => {
       <h5 class="card-title">${item.title}</h5>
       <p class="card-text">${item.description}</p>
       <p class="card-text">${item.price}</p>
-      <button class=" btn btn-primary addToCartBtn" data-Product-id=${item.id}>Add To Cart</button>
+      <button class=" btn btn-outline-primary addToCartBtn" data-Product-id=${item.id}>Add To Cart</button>
     </div>
   </div>`
   })
@@ -65,14 +65,14 @@ menFn()
 
 
 const logoutHandler = () => {
-    localStorage.setItem("isUserLoggedIn", JSON.stringify(false));
-    window.location.reload()
-    setTimeout(() => {
-      window.location.href = "/Pages/login.html"
-  
-    }, 1000)
-  }
-  
+  localStorage.setItem("isUserLoggedIn", JSON.stringify(false));
+  window.location.reload()
+  setTimeout(() => {
+    window.location.href = "/Pages/login.html"
+
+  }, 1000)
+}
+
 
 
 const addToCartHandler = (btn) => {
@@ -107,31 +107,31 @@ const addToCartHandler = (btn) => {
   sweety("success", "Great!", "Added To Cart Successfully!")
   badgeHandler()
 }
-console.log(menCard);
+// console.log(menCard);
 
 const searchHanlder = (event) => {
-event.preventDefault()
-let searchVal = input.value; 
+  event.preventDefault()
+  let searchVal = input.value;
 
-if(!searchVal){
-return sweety("error" , "Error" , "Please Enter Something!")
-}
-
-
-
-let modify = menProducts.filter((item) => {
-  if(item.title.toLowerCase().includes(searchVal.toLowerCase())){
-   return item
-     
+  if (!searchVal) {
+    return sweety("error", "Error", "Please Enter Something!")
   }
-})
 
-console.log(searchVal.toLowerCase());
 
-console.log(modify);
 
-const mapping = modify.map((o) => {
-return `<div class="card" style="width: 18rem;">
+  let modify = menProducts.filter((item) => {
+  if (item.title.toLowerCase().includes(searchVal.toLowerCase())) {
+      return item
+
+    }
+  })
+
+  // console.log(searchVal.toLowerCase());/
+
+  // console.log(modify);
+
+  const mapping = modify.map((o) => {
+    return `<div class="card" style="width: 18rem;">
 <img src="${o.image}" class="card-img-top" alt="...">
 <div class="card-body">
   <h5 class="card-title">${o.title}</h5>
@@ -139,29 +139,29 @@ return `<div class="card" style="width: 18rem;">
   <button class=" btn btn-primary addToCartBtn" data-Product-id="${o.id}">Add To Cart</button>
 </div>
 </div>`
-})
+  })
 
 
-menCard.innerHTML = mapping.join(" ")
+  menCard.innerHTML = mapping.join(" ")
 }
 
 
-searchBtn.addEventListener("click" , () => {searchHanlder(event)})
+searchBtn.addEventListener("click", () => { searchHanlder(event) })
 
 document.addEventListener("click", (e) => {
-    // console.log(e.target.classList.contains("logoutBtn"));
-  
-    if (e.target.classList.contains("logoutBtn")) {
-      // console.log(("ohooo"));
-      logoutHandler()
-    }
-    // }else{
-    //   console.log("nhi mila");
-  
-    // }
-  
-    if (e.target.classList.contains("addToCartBtn")) {
-      addToCartHandler(e.target)
-    }
-  
-  })
+  // console.log(e.target.classList.contains("logoutBtn"));
+
+  if (e.target.classList.contains("logoutBtn")) {
+    // console.log(("ohooo"));
+    logoutHandler()
+  }
+  // }else{
+  //   console.log("nhi mila");
+
+  // }
+
+  if (e.target.classList.contains("addToCartBtn")) {
+    addToCartHandler(e.target)
+  }
+
+})

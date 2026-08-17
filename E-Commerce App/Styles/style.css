@@ -37,7 +37,7 @@ height: 500px;
     height: 100%;
     width: 100%;
 }
-#men h1 , #women h1 , #kid h1{
+#men h1 , #women h1 , #kid h1 , #cart h1{
     font-weight: bold;
     text-align: center;
     margin: 30px auto;
