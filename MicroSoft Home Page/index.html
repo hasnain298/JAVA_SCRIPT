@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicroSoft Home Page</title>
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEej-B-dTbyp-oJ3GLCfQ3EYHxn9TpTooXcss2g9mJMQ&s=10" type="image/x-icon">
+</head>
+<body>
+<style>
+    /* 1. Set up the parent link container */
+.pp {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+    /* padding-bottom: 4px; */
+    display: inline-block; /* Ensures consistent layout spacing */
+  }
+  body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .pp::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;            /* Keep full width */
+    height: 2px;
+    background-color: #000000;
+    
+    /* 1. Start scaled down to 0% width */
+    transform: scaleX(0);   
+    /* 2. Anchor the scaling animation to start from the left side */
+    transform-origin: bottom left; 
+    /* 3. Animate the transform property instead of width */
+    transition: transform 0.7ms ease-in-out; 
+  }
+  
+  .pp:hover::after {
+    /* 4. Scale out to 100% size smoothly */
+    transform: scaleX(1); 
+  }
+  .card{
+    /* Enclosing the file path in quotes prevents syntax breaking */
+    background-image: url("Hero-Mobile-Windows-11-Business-Transformation (1).avif");
+    
+    /* Essential properties to make the Microsoft hero image look correct */
+    background-size: cover;       /* Stretches to fill the container without distortion */
+    /* background-position: ;  Keeps the focus on the middle of the image */
+    background-repeat: no-repeat; /* Prevents the image from tiling */
+    min-height: 600px;    
+  }
+
+</style>
+
+   <!-- Navbar -->
+    <nav class="flex h-[70px] w-full items-center justify-between p-2 ">
+        <!-- Left-Side-Bar  -->
+        <div class="flex justify-end items-center gap-5  w-[600px] p-2 ">
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEej-B-dTbyp-oJ3GLCfQ3EYHxn9TpTooXcss2g9mJMQ&s=10" alt="" height="60px " width="60px">
+            </div >
+            <div><p class="hover:cursor-pointer pp border-black">Microsoft 365</p></div>
+            <div><p class="hover:cursor-pointer pp border-black">Office</p></div>
+            <div><p class="hover:cursor-pointer pp border-black">Azure</p></div>
+            <div><p class="hover:cursor-pointer pp border-black">Copilot</p></div>
+            <div><p class="hover:cursor-pointer pp border-black">Windows</p></div>
+            <div><p class="hover:cursor-pointer pp border-black">Support</p></div>
+        </div>
+
+        <!-- Right-Side-Bar  -->
+        <div class="flex  w-[300px] p-2 h-[70px] items-center justify-start gap-8" >
+            <div><p class="pp hover:cursor-pointer">All Microsoft</p></div>
+            <div><i data-lucide="search" class="w-5 h-5  cursor-pointer"></i></div>
+            <div><i data-lucide="shopping-cart" class="w-6 h-6 cursor-pointer"></i></div>
+            <div class="border rounded-full border-2 border-black h-[40px] w-[40px] flex items-center justify-center hover:cursor-progress">ME</div>
+        </div>
+    </nav>
+
+    <!-- Hero Section  -->
+     <section>
+        <!-- Card / Slider  -->
+        <div class="card relative">
+         <h1 class="text-white text-5xl font-thin absolute left-20  bottom-[270px]">Designed for life today – and <br>tomorrow</h1>
+         <p class="text-white text-lg italic absolute bottom-[200px] left-20">The next-generation of games. Your goals. Friends and family. Windows 11 <br> was made to bring you closer to everything you love.</p>
+         <button class="bg-white h-[50px] w-[200px] absolute bottom-[130px] left-20 rounded-lg italic">See If Your PC is ready</button>
+        </div> 
+     </section>
+
+
+     <!-- Section2 / Cards Mapping! -->
+      <div class="mt-4 flex flex-wrap gap-[20px] shadow-xl">
+        <div class="h-[500px] w-[360px] shadow-xl rounded-lg ">
+       <div>
+        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-M365-Icon-Bounce-Premium?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=800&hei=450&qlt=85&fit=constrain" class="rounded-lg p-2" alt="">
+       </div>
+       <div class="h-[100px] w-[350px]  p-3 justify-center  flex items-center">
+      <h1 class="text-2xl font-bold mb-5">Your productivity,<br> supercharged</h1>
+       </div>
+       <div class="h-[100px]  text-lg flex text-start pl-5"><p>Microsoft 365 delivers cloud storage, advanced security and Microsoft Copilot in your favourite apps – all in one plan.</p></div>
+       <button class="bg-[#006DC1] h-[50px] w-[200px] ml-5 mt-4 rounded-lg text-white text-lg">Shop Microsoft 365</button>
+        </div>
+        <div class="h-[500px] w-[360px] shadow-xl rounded-lg ">
+            <div>
+             <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Bing-Wallpaper-Giants-Causeway?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=800&hei=450&qlt=85&fit=constrain" class="rounded-lg p-2" alt="">
+            </div>
+            <div class="h-[100px] w-[350px]  p-3 justify-center  flex items-center">
+           <h1 class="text-2xl font-bold mb-5">Bring the world closer with Bing Wallpaper</h1>
+            </div>
+            <div class="h-[100px]  text-lg flex text-start pl-5"><p>Download the free app and enjoy breathtaking views with a new background each day.</p></div>
+            <button class="bg-[#006DC1] h-[50px] w-[200px] ml-5 mt-4 rounded-lg text-white text-lg">Shop Microsoft 365</button>
+             </div>
+             <div class="h-[500px] w-[360px] shadow-xl rounded-lg ">
+                <div>
+                 <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-MSFT-CP-Edge?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=800&hei=450&qlt=85&fit=constrain" class="rounded-lg p-2" alt="">
+                </div>
+                <div class="h-[100px] w-[350px]  p-3 justify-center  flex items-center">
+               <h1 class="text-2xl font-bold mb-5">Your productivity,<br> supercharged</h1>
+                </div>
+                <div class="h-[100px]  text-lg flex text-start pl-5"><p>Microsoft 365 delivers cloud storage, advanced security and Microsoft Copilot in your favourite apps – all in one plan.</p></div>
+                <button class="bg-[#006DC1] h-[50px] w-[200px] ml-5 mt-4 rounded-lg text-white text-lg">Shop Microsoft 365</button>
+                 </div>
+                 <div class="h-[500px] w-[360px] shadow-xl rounded-lg ">
+                    <div>
+                     <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Soft-CP-OneDriveCampaignRefresh-2?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=800&hei=450&qlt=85&fit=constrain" class="rounded-lg p-2" alt="">
+                    </div>
+                    <div class="h-[100px] w-[350px]  p-3 justify-center  flex items-center">
+                   <h1 class="text-2xl font-bold mb-5">Your productivity,<br> supercharged</h1>
+                    </div>
+                    <div class="h-[100px]  text-lg flex text-start pl-5"><p>Microsoft 365 delivers cloud storage, advanced security and Microsoft Copilot in your favourite apps – all in one plan.</p></div>
+                    <button class="bg-[#006DC1] h-[50px] w-[200px] ml-5 mt-4 rounded-lg text-white text-lg">Shop Microsoft 365</button>
+                     </div>
+        
+      </div>
+      
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@1.33.0/dist/umd/lucide.min.js"></script>
+    <script>
+        lucide.createIcons();
+      </script>
+</body>
+</html>

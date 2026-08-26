@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <h1 style="color: white;">Weather Application</h1>
+    <div class="container">
+        <div class="header">
+            <div class="search-box">
+                <input type="text" placeholder="Enter Your Location" class="input-box">
+                <button class="fa-solid fa-magnifying-glass" id="searchBtn"></button>
+                <i></i>
+            </div>
+        </div>
+        
+         <div class="location">
+            <h1>Sorry, Location Not Found!</h1>
+            <img src="/assets/404.png" alt="">
+         </div>
+
+        <div class="weather-body">
+            <img src="/assets/404.png" alt="" class="weather">
+            <div class="weather-box">
+                <p class="tempreature">0 <sup>°C</sup></p>
+                <p class="description">Light Rain</p>
+            </div>
+            <div class="weather-details">
+                <div class="humidity">
+                    <div>
+                        <img src="/assets/humidity.png"  alt="">
+                    </div>
+                    <div class="text">
+                        <span id="humidity">45%</span>
+                    <p id="">Humidity</p>
+                    </div>
+                </div>
+                <div class="wind">
+                    <div>
+                        <img src="/assets/wind (1).png"  alt="">
+                    </div>
+                    <div class="text">
+                        <span id="wind-speed">120Km/h</span>
+                    <p id="">Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="icon">
+           
+        </div><span class="icon2">Live</span>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
